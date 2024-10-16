@@ -6,10 +6,11 @@ namespace Source;
 
 class SayHello
 {
-    protected $property;
+    protected $property; //Declaração da variável (ou propriedade da classe SayHello) $property com visibilidade protectd.
 
-    public function __construct($property)
+    public function __construct($property) //Declaração do método construtor da classe passando a variável, ou propriedade $property como parâmetro.
     {
+        // Isso inicializa a propriedade $property da classe SayHello, com o valor que for fornecido ao criar um objeto.
         $this->property = $property;
     }
 

@@ -1,7 +1,7 @@
-# ESTAGIO_PROJECT
+### ESTAGIO_PROJECT
 Projeto PHP com Composer desenvolvido durante o estágio obrigatório em Verde-Leão Marketing Digital.
 
-# A CLASSE SayHello
+### A CLASSE SayHello
 `protected $property;`: Isso define uma propriedade chamada $property que tem visibilidade "protected". Isso significa que a propriedade pode ser acessada dentro da própria classe e por classes derivadas (subclasses), mas não diretamente de fora dessas classes.
 
 `public function __construct($property)`: Este é o método construtor da classe. Ele é chamado automaticamente quando um novo objeto da classe é criado. Aqui, ele aceita um argumento $property.

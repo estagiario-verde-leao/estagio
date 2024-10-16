@@ -4,7 +4,6 @@ use Source\SayHello;
 
 require './vendor/autoload.php';
 
-
 $obj_saudacao = new SayHello("estagiario");
 
 echo "1 - CHAMADA DO  MÉTODO sayHello()" . PHP_EOL;
