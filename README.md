@@ -4,6 +4,11 @@ Projeto PHP com Composer desenvolvido durante o estágio obrigatório em Verde-L
 ### A CLASSE SayHello
 A class SayHello() possui um método, que quando chamado, imprime no console de depuração uma expressão de saudação.
 
+    <?php
+
+
+    namespace Source;
+
     class SayHello {
         protected $property;
         public function __construct($property) {
@@ -38,3 +43,18 @@ Nesse exemplo:
 **Método sayHello**: Quando chamado, ele imprime uma saudação personalizada usando a propriedade $property.
 
 Quando você cria um novo objeto SayHello com o argumento "estagiário" e chama sayHello, ele imprime "Olá, estagiário!".
+
+###  O ARQUIVO index.php
+    <?php
+
+    use Source\SayHello;
+
+    require './vendor/autoload.php';
+
+    $obj_saudacao = new SayHello("estagiario");
+    $obj_saudacao->sayHello() . PHP_EOL;
+
+    unset($obj_saudacao);
+Observe a classe `SayHello()` sendo instanciada `$obj_saudacao = new SayHello("estagiario");`.
+
+Observe também a chamada do método `sayHello ()` e a chamada do método destrutor da classe `unset()`.
