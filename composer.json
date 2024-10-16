@@ -1,10 +1,21 @@
 {
     "name": "dev/estagio_project",
+    "description": "Projeto com Apache2, PHP e MySql",
+    "type": "project",
+    "license": "MIT",
+    "version": "1.0.0",
+    "homepage": "https://github.com/lucioweb/myapp",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "lucioweb",
             "email": "lucio.lemos.385@ufrn.edu.br"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        }
+    },
     "require": {}
 }
