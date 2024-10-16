@@ -3,22 +3,18 @@ Projeto PHP com Composer desenvolvido durante o estágio obrigatório em Verde-L
 
 ### A CLASSE SayHello
 
-    class SayHello
-    {
+    class SayHello {
     protected $property;
-    public function __construct($property) 
-    {
+    public function __construct($property) {
        $this->property = $property;
     }
 
-    public function sayHello(): void
-    {
+    public function sayHello(): void {
         echo "1 - CHAMADA DO  MÉTODO sayHello()" . PHP_EOL;
         echo "Olá, " . $this->property . "!" . PHP_EOL;
     }
 
-        public function __destruct()
-    {
+        public function __destruct() {
         echo "2 - CHAMADA DO  MÉTODO __destruct()" . PHP_EOL;
         echo "A variável \$obj_saudacao, instância da classe SayHello(), que recebeu " . PHP_EOL . $this->property . " como parâmetro, não está mais em uso e foi destruída liberando recurso.";
     }
