@@ -1,0 +1,10 @@
+{
+    "name": "dev/estagio_project",
+    "authors": [
+        {
+            "name": "lucioweb",
+            "email": "lucio.lemos.385@ufrn.edu.br"
+        }
+    ],
+    "require": {}
+}
