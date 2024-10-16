@@ -15,8 +15,8 @@ Projeto PHP com Composer desenvolvido durante o estágio obrigatório em Verde-L
         }
 
         public function __destruct() {
-        echo "2 - CHAMADA DO  MÉTODO __destruct()" . PHP_EOL;
-        echo "A variável \$obj_saudacao, instância da classe SayHello(), que recebeu " . PHP_EOL . $this->property . " como parâmetro, não está mais em uso e foi destruída liberando recurso.";
+            echo "2 - CHAMADA DO  MÉTODO __destruct()" . PHP_EOL;
+            echo "A variável \$obj_saudacao, instância da classe SayHello(), que recebeu " . PHP_EOL . $this->property . " como parâmetro, não está mais em uso e foi destruída liberando recurso.";
         }
     }
 
