@@ -2,6 +2,28 @@
 Projeto PHP com Composer desenvolvido durante o estágio obrigatório em Verde-Leão Marketing Digital.
 
 ### A CLASSE SayHello
+
+    class SayHello
+    {
+    protected $property;
+    public function __construct($property) 
+    {
+       $this->property = $property;
+    }
+
+    public function sayHello(): void
+    {
+        echo "1 - CHAMADA DO  MÉTODO sayHello()" . PHP_EOL;
+        echo "Olá, " . $this->property . "!" . PHP_EOL;
+    }
+
+        public function __destruct()
+    {
+        echo "2 - CHAMADA DO  MÉTODO __destruct()" . PHP_EOL;
+        echo "A variável \$obj_saudacao, instância da classe SayHello(), que recebeu " . PHP_EOL . $this->property . " como parâmetro, não está mais em uso e foi destruída liberando recurso.";
+    }
+}
+
 `protected $property;`: Isso define uma propriedade chamada $property que tem visibilidade "protected". Isso significa que a propriedade pode ser acessada dentro da própria classe e por classes derivadas (subclasses), mas não diretamente de fora dessas classes.
 
 `public function __construct($property)`: Este é o método construtor da classe. Ele é chamado automaticamente quando um novo objeto da classe é criado. Aqui, ele aceita um argumento $property.
