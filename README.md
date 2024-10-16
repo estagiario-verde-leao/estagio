@@ -2,7 +2,7 @@
 Projeto PHP com Composer desenvolvido durante o estágio obrigatório em Verde-Leão Marketing Digital.
 
 ### A CLASSE SayHello
-a class SayHello() possui um método, que quando chamado, imprime no console de depuração uma expressão de saudação.
+A class SayHello() possui um método, que quando chamado, imprime no console de depuração uma expressão de saudação.
 
     class SayHello {
         protected $property;
