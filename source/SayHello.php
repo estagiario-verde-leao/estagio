@@ -16,11 +16,19 @@ class SayHello
 
     public function sayHello(): void
     {
+        echo "1 - CHAMADA DO  MÉTODO sayHello()" . PHP_EOL;
         echo "Olá, " . $this->property . "!" . PHP_EOL;
     }
 
+    //* Seu destrutor está correto e não precisa receber parâmetros. 
+    // Em PHP, o método __destruct é chamado automaticamente quando um objeto é destruído, 
+    // e é uma boa prática usá-lo para liberar recursos ou realizar outras tarefas de limpeza.
+    // O método __destruct pode ser usado assim, sem parâmetros, para realizar ações quando 
+    // o objeto está sendo destruído:
+
     public function __destruct()
     {
-        //* Code
+        echo "2 - CHAMADA DO  MÉTODO __destruct()" . PHP_EOL;
+        echo "A variável \$obj_saudacao, instância da classe SayHello(), que recebeu " . PHP_EOL . $this->property . " como parâmetro, não está mais em uso e foi destruída liberando recurso.";
     }
 }
