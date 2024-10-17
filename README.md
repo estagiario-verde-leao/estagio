@@ -1,6 +1,8 @@
+### ESTAGIO_PROJECT
+Projeto de estudo para o entendimento dos conceitos de classes, objetos e funções no PHP.
 <details>
 <summary>CARACTERÍSTICAS DO PROJETO :eye: </summary>
-Projeto de estudo de Programação Orientada a Objetos - POO com Apache2, PHP 8.3, MySql, Composer, rodando em Ubuntu 24.04 em servidor local. O projeto usa o conceito de VirtualHost do Apache 
+Projeto de estudo de Programação Orientada a Objetos - POO com Apache2, PHP 8.3, MySql, Composer, rodando em Ubuntu 24.04 em servidor local. O projeto usa o conceito de VirtualHost do Apache. 
 </details>
 
 <details>
@@ -13,6 +15,7 @@ A class SayHello() possui um método, que quando chamado, imprime no console de 
 
     class SayHello {
         protected $property;
+
         public function __construct($property) {
            $this->property = $property;
         }
@@ -64,7 +67,7 @@ Quando o método sayHello é chamado é impresso (echo) no console de depuraçã
 
     if (!isset($obj_saudacao)) {
     echo "A variável \$obj_saudacao, instância da classe SayHello(), " . PHP_EOL . "que recebeu \"estagiario\" como parâmetro, não está mais em uso e foi destruída liberando recurso.";
-}
+    }
 Observe a classe `SayHello()` sendo instanciada `$obj_saudacao = new SayHello("estagiario");`.
 
 Observe também a chamada do método `sayHello ()` e do método destrutor da classe `unset()`.

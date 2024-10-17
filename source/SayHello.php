@@ -1,6 +1,6 @@
 <?php
 
-
+// O namespace basicamente dis à apalicação, onde está localizado o arquivo SayHello.php
 namespace Source;
 
 
