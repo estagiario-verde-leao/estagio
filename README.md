@@ -10,25 +10,30 @@ Projeto de estudo para o entendimento dos conceitos de classes, objetos e funç�
     ├── source
     │       └── SayHello.php
     └── vendor
+
+Aequivos gerados pelo GitHup durante a criação do repositório.
+
+    ├── LICENSE 
+    ├── README.md
+
+Arquivo gerado pelo Composer durante a execução do comando `$ composer init`.
     
-Aequivos gerados pelo GitHup durante a criação do repositório
- ├── LICENSE 
- ├── README.md
+    ├── composer.json
 
-Arquivo gerado pelo Composer durante a execução do comando $ composer init.
- ├── composer.json
+Arquivo gerado pelo Composer durante a execução de `$ composer update`.
 
-Arquivo gerado pelo Composer durante a execução de $ composer update.
-├──  composer.lock 
+    ├──  composer.lock 
 
 Arquivo criado manualmete.
-├── index.php
+    
+    ├── index.php
 
 Diretório/arquivo criados manualmente.
- ├── source
-           └──SayHello.php
+    
+    ├── source
+             └──SayHello.php
 
-Diretório gerado pelo Composer durante a execução de $ composer update.
+Diretório gerado pelo Composer durante a execução de `$ composer update`.
  vendor     
 <details>
 <summary>CARACTERÍSTICAS DO PROJETO :eye: </summary>
