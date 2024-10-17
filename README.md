@@ -62,5 +62,10 @@ Observe a classe `SayHello()` sendo instanciada `$obj_saudacao = new SayHello("e
 Observe também a chamada do método `sayHello ()` e do método destrutor da classe `unset()`.
 
 ### O MÉTODO unset()
-O método unset() é uma função do PHP usada para destruir variáveis especificadas. Quando você chama unset() em uma variável, o PHP remove essa variável do escopo atual, liberando qualquer memória associada a ela. Vemos aqui que o  método unset() só funciona porque temos declarado dentro da função Sayhello() o método destrutor.
-Excluir da função SayHello() o método `__destruct()`, fazer a chamada do `unset()` em `index.php` e ver o que acontece é um bom exercício
+O método unset() é uma função do PHP usada para destruir variáveis especificadas. 
+
+Quando você chama unset() em uma variável, o PHP remove essa variável do escopo atual, liberando qualquer memória associada a ela. 
+
+Vemos aqui que o  método unset() só funciona porque temos declarado dentro da função Sayhello() o método destrutor.
+
+Excluir da função SayHello() o método `__destruct()`, fazer a chamada do método `unset()` em `index.php` e ver o que acontece é um bom exercício.
