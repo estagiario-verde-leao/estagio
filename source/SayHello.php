@@ -17,7 +17,7 @@ class SayHello
     public function sayHello(): void
     {
         echo "1 - CHAMADA DO  MÉTODO sayHello()" . PHP_EOL;
-        echo "Olá, " . $this->property . "!" . PHP_EOL;
+        echo "Olá " . $this->property . "!" . PHP_EOL;
     }
 
     /*  O destrutor está correto e não precisa receber parâmetros. 

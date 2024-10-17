@@ -1,11 +1,10 @@
 ### ESTAGIO_PROJECT
 Projeto PHP com Composer desenvolvido durante o estágio obrigatório em Verde-Leão Marketing Digital.
 
-### A CLASSE SayHello
+### A CLASSE `class SayHello()`
 A class SayHello() possui um método, que quando chamado, imprime no console de depuração uma expressão de saudação.
 
     <?php
-
 
     namespace Source;
 
@@ -42,7 +41,10 @@ Nesse exemplo:
 
 **Método sayHello**: Quando chamado, ele imprime uma saudação personalizada usando a propriedade $property.
 
-Quando você cria um novo objeto SayHello com o argumento "estagiário" e chama sayHello, ele imprime "Olá, estagiário!".
+Quando o objeto `$obj_saudacao` é criado, diz-se que a classe `SayHello()` foi instanciada. Diz-se também que `$obj_saudacao` é um "novo" objeto SayHello().
+Agora passamos a expressão "estagiario" como argumento em Sayhello ().
+
+Quando o método sayHello é chamado é impresso (echo) no console de depuração, a expressão "estagiario", que concatenada com "Olá", produz a expressão de saudação "Olá estagiario".
 
 ###  O ARQUIVO index.php
     <?php
@@ -57,4 +59,8 @@ Quando você cria um novo objeto SayHello com o argumento "estagiário" e chama 
     unset($obj_saudacao);
 Observe a classe `SayHello()` sendo instanciada `$obj_saudacao = new SayHello("estagiario");`.
 
-Observe também a chamada do método `sayHello ()` e a chamada do método destrutor da classe `unset()`.
+Observe também a chamada do método `sayHello ()` e do método destrutor da classe `unset()`.
+
+### O MÉTODO unset()
+O método unset() é uma função do PHP usada para destruir variáveis especificadas. Quando você chama unset() em uma variável, o PHP remove essa variável do escopo atual, liberando qualquer memória associada a ela. Vemos aqui que o  método unset() só funciona porque temos declarado dentro da função Sayhello() o método destrutor.
+Um bom exercício é excluir da função SayHello() o método `__destruct()`, fazer a chamada do `unset()` em `index.php` e ver o que acontece.
