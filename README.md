@@ -1,7 +1,10 @@
-### ESTAGIO_PROJECT
-Projeto PHP com Composer desenvolvido durante o estágio obrigatório em Verde-Leão Marketing Digital.
+<details>
+<summary>CARACTERÍSTICAS DO PROJETO :eye: </summary>
+Projeto de estudo de Programação Orientada a Objetos - POO com Apache2, PHP 8.3, MySql, Composer, rodando em Ubuntu 24.04 em servidor local. O projeto usa o conceito de VirtualHost do Apache 
+</details>
 
-### A CLASSE `class SayHello()`
+<details>
+<summary>A CLASSE Say Hello :eye: </summary> 
 A class SayHello() possui um método, que quando chamado, imprime no console de depuração uma expressão de saudação.
 
     <?php
@@ -20,8 +23,7 @@ A class SayHello() possui um método, que quando chamado, imprime no console de 
         }
 
         public function __destruct() {
-            echo "2 - CHAMADA DO  MÉTODO __destruct()" . PHP_EOL;
-            echo "A variável \$obj_saudacao, instância da classe SayHello(), que recebeu " . PHP_EOL . $this->property . " como parâmetro, não está mais em uso e foi destruída liberando recurso.";
+            echo "2 - CHAMADA DO  MÉTODO __destruct()" . PHP_EOL;            
         }
     }
 
@@ -45,8 +47,10 @@ Quando o objeto `$obj_saudacao` é criado, diz-se que a classe `SayHello()` foi 
 Agora passamos a expressão "estagiario" como argumento em Sayhello ().
 
 Quando o método sayHello é chamado é impresso (echo) no console de depuração, a expressão "estagiario", que concatenada com "Olá", produz a expressão de saudação "Olá estagiario".
+</details>
+<details>
+<summary>O ARQUIVO index.php :eye: </summary> 
 
-###  O ARQUIVO index.php
     <?php
 
     use Source\SayHello;
@@ -57,11 +61,17 @@ Quando o método sayHello é chamado é impresso (echo) no console de depuraçã
     $obj_saudacao->sayHello() . PHP_EOL;
 
     unset($obj_saudacao);
+
+    if (!isset($obj_saudacao)) {
+    echo "A variável \$obj_saudacao, instância da classe SayHello(), " . PHP_EOL . "que recebeu \"estagiario\" como parâmetro, não está mais em uso e foi destruída liberando recurso.";
+}
 Observe a classe `SayHello()` sendo instanciada `$obj_saudacao = new SayHello("estagiario");`.
 
 Observe também a chamada do método `sayHello ()` e do método destrutor da classe `unset()`.
+</details>
 
-### O MÉTODO unset()
+<details>
+<summary>O MÉTODO unset() :eye: </summary> 
 O método unset() é uma função do PHP usada para destruir variáveis especificadas. 
 
 Quando você chama unset() em uma variável, o PHP remove essa variável do escopo atual, liberando qualquer memória associada a ela. 
@@ -69,3 +79,4 @@ Quando você chama unset() em uma variável, o PHP remove essa variável do esco
 Vemos aqui que o  método unset() só funciona porque temos declarado dentro da função Sayhello() o método destrutor.
 
 Excluir da função SayHello() o método `__destruct()`, fazer a chamada do método `unset()` em `index.php` e ver o que acontece é um bom exercício.
+</details>
