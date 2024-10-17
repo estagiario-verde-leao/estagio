@@ -2,14 +2,34 @@
 Projeto de estudo para o entendimento dos conceitos de classes, objetos e funções no PHP.
 ### ESTRUTURA DO PROJETO
     .
-    ├── LICENSE //Gerado pelo próprio GitHub durante a criação do repositório. 
-    ├── README.md //Gerado pelo próprio GitHub durante a criação do repositório. 
-    ├── composer.json //Gerado pelo Composer durante a execução de $ composer init. 
-    ├── composer.lock //Gerado pelo Composer durante a execução de $ composer update.
-    ├── index.php // Arquivo criado manualmente.
-    ├── source // Diretório criado manualmente.
+    ├── LICENSE 
+    ├── README.md 
+    ├── composer.json
+    ├── composer.lock
+    ├── index.php
+    ├── source
     │       └── SayHello.php
-    └── vendor //Gerado pelo Composer durante a execução de $ composer update.
+    └── vendor
+    
+Aequivos gerados pelo GitHup durante a criação do repositório
+ ├── LICENSE 
+ ├── README.md
+
+Arquivo gerado pelo Composer durante a execução do comando $ composer init.
+ ├── composer.json
+
+Arquivo gerado pelo Composer durante a execução de $ composer update.
+├──  composer.lock 
+
+Arquivo criado manualmete.
+├── index.php
+
+Diretório/arquivo criados manualmente.
+ ├── source
+           └──SayHello.php
+
+Diretório gerado pelo Composer durante a execução de $ composer update.
+ vendor     
 <details>
 <summary>CARACTERÍSTICAS DO PROJETO :eye: </summary>
 Projeto de estudo de Programação Orientada a Objetos - POO com Apache2, PHP 8.3, MySql, Composer, rodando em Ubuntu 24.04 em servidor local. O projeto usa o conceito de VirtualHost do Apache. 
