@@ -1,5 +1,15 @@
 ### ESTAGIO_PROJECT
 Projeto de estudo para o entendimento dos conceitos de classes, objetos e funções no PHP.
+### ESTRUTURA DO PROJETO
+    .
+    ├── LICENSE //Gerado pelo próprio GitHub durante a criação do repositório. 
+    ├── README.md //Gerado pelo próprio GitHub durante a criação do repositório. 
+    ├── composer.json //Gerado pelo Composer durante a execução de $ composer init. 
+    ├── composer.lock //Gerado pelo Composer durante a execução de $ composer update.
+    ├── index.php // Arquivo criado manualmente.
+    ├── source // Diretório criado manualmente.
+    │       └── SayHello.php
+    └── vendor //Gerado pelo Composer durante a execução de $ composer update.
 <details>
 <summary>CARACTERÍSTICAS DO PROJETO :eye: </summary>
 Projeto de estudo de Programação Orientada a Objetos - POO com Apache2, PHP 8.3, MySql, Composer, rodando em Ubuntu 24.04 em servidor local. O projeto usa o conceito de VirtualHost do Apache. 
