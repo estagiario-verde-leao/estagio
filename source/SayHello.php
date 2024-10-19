@@ -16,6 +16,7 @@ class SayHello
 
     public function sayHello(): void
     {
+        echo "A CLASSE CONCRETA SayHello() - PROPRIEDADES E MÉTODOS DE CLASSE" . PHP_EOL;
         echo "1 - CHAMADA DO  MÉTODO sayHello()" . PHP_EOL;
         echo "Olá " . $this->property . "!" . PHP_EOL;
     }
@@ -27,6 +28,6 @@ class SayHello
 
     public function __destruct()
     {
-        echo "2 - CHAMADA DO  MÉTODO __destruct()" . PHP_EOL;
+        echo "2 - CHAMADA DO  MÉTODO __destruct() DA CLASSE SayHello()" . PHP_EOL;
     }
 }

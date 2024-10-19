@@ -1,6 +1,10 @@
 <?php
 // O use faz o autoimport da classe
+
+use Source\AreaTriangulo;
+use Source\Presentation;
 use Source\SayHello;
+
 // O require faz o autocarregamento das depedndências que o projeto necessita.
 require './vendor/autoload.php';
 
@@ -9,7 +13,7 @@ declarada lá na classe SayHello() e passada como parâmetro no método construt
 
 $obj_saudacao = new SayHello("estagiario");
 $obj_saudacao->sayHello() . PHP_EOL;
-
+echo PHP_EOL;
 /* 
 O método unset() destrói o objeto (variável) $obj_saudacao, instância da classe SayHello();
 É desnecessário aqui, pois o método __destruct() é chamado automaticamente se ele existir na classe SayHello(). 
@@ -23,5 +27,30 @@ objeto $obj_saudacao que é uma variável.
 unset($obj_saudacao);
 
 if (!isset($obj_saudacao)) {
-    echo "A variável \$obj_saudacao, instância da classe SayHello(), " . PHP_EOL . "que recebeu \"estagiario\" como parâmetro, não está mais em uso e foi destruída liberando recurso.";
+    echo "A variável \$obj_saudacao, instância da classe SayHello(), " . PHP_EOL .
+        "que recebeu \"estagiario\" como parâmetro, não está mais em uso e foi destruída liberando recurso." . PHP_EOL;
 }
+
+/* readline() é uma função em PHP que lê uma linha de entrada do terminal. 
+Essencialmente, ela permite que você interaja com o usuário através do terminal, 
+solicitando e capturando a entrada do usuário. Imagine uma conversa no terminal: 
+você faz uma pergunta ou solicita uma entrada, e o usuário digita a resposta. 
+readline() captura essa resposta e a armazena em uma variável para que você possa usá-la no seu script.
+ */
+
+echo PHP_EOL;
+/*Este código organiza a lógica de entrada e cálculo dentro de uma classe, 
+seguindo os princípios da programação orientada a objetos.*/
+
+$area = new AreaTriangulo();
+$area->exibirArea();
+unset($area);
+if (!isset($area)) {
+    echo "A variável \$area, instância da classe AreaTriangulo(), " . PHP_EOL .
+        "não está mais em uso e foi destruída liberando recurso." . PHP_EOL;
+}
+
+echo PHP_EOL;
+$apresentacao = new Presentation();
+$apresentacao->saudar();
+echo PHP_EOL;
