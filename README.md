@@ -130,18 +130,30 @@ Quando o método sayHello é chamado é impresso (echo) no console de depuraçã
 
     <?php
 
+    use Source\AreaTriangulo;
+    use Source\Presentation;
     use Source\SayHello;
 
     require './vendor/autoload.php';
 
     $obj_saudacao = new SayHello("estagiario");
     $obj_saudacao->sayHello() . PHP_EOL;
-
     unset($obj_saudacao);
+       if (!isset($obj_saudacao)) {
+          echo "A variável \$obj_saudacao, instância da classe SayHello(), " . PHP_EOL . "que recebeu \"estagiario\" como parâmetro, não está mais em uso e foi destruída liberando recurso.";
+        }
 
-    if (!isset($obj_saudacao)) {
-    echo "A variável \$obj_saudacao, instância da classe SayHello(), " . PHP_EOL . "que recebeu \"estagiario\" como parâmetro, não está mais em uso e foi destruída liberando recurso.";
-    }
+    $area = new AreaTriangulo();
+    $area->exibirArea();
+    unset($area);
+       if (!isset($area)) {
+         echo "A variável \$area, instância da classe AreaTriangulo(), " . PHP_EOL .
+         "não está mais em uso e foi destruída liberando recurso." . PHP_EOL;
+        }
+
+    $apresentacao = new Presentation();
+    $apresentacao->saudar();
+
 Observe a classe `SayHello()` sendo instanciada `$obj_saudacao = new SayHello("estagiario");`.
 
 Observe também a chamada do método `sayHello ()` e do método destrutor da classe `unset()`.
