@@ -1,14 +1,14 @@
 <?php
 
-// O namespace basicamente dis à apalicação, onde está localizado o arquivo SayHello.php
 namespace Source;
-
 
 class SayHello
 {
-    protected $property; //Declaração da variável (ou propriedade da classe SayHello) $property com visibilidade protectd.
+    //Declaração da variável (ou propriedade da classe SayHello) $property com visibilidade protectd.
+    protected $property;
 
-    public function __construct($property) //Declaração do método construtor da classe passando a variável, ou propriedade $property como parâmetro.
+    //Declaração do método construtor da classe passando a variável, ou propriedade $property como parâmetro.
+    public function __construct($property)
     {
         // Isso inicializa a propriedade $property da classe SayHello(), com o valor que for fornecido quando a classe for instanciada.
         $this->property = $property;
@@ -21,10 +21,13 @@ class SayHello
         echo "Olá " . $this->property . "!" . PHP_EOL;
     }
 
-    /*  O destrutor está correto e não precisa receber parâmetros. 
-    Em PHP, o método __destruct é chamado automaticamente quando um objeto é destruído, 
-    e é uma boa prática usá-lo para liberar recursos ou realizar outras tarefas de limpeza.
-    O método __destruct pode ser usado assim, sem parâmetros, para realizar ações quando o objeto está sendo destruído: */
+    /*  
+     O destrutor está correto e não precisa receber parâmetros. 
+     Em PHP, o método __destruct é chamado automaticamente quando um objeto é destruído, 
+     e é uma boa prática usá-lo para liberar recursos ou realizar outras tarefas de limpeza.
+     O método __destruct pode ser usado assim, sem parâmetros, para realizar ações 
+     quando o objeto está sendo destruído: 
+    */
 
     public function __destruct()
     {

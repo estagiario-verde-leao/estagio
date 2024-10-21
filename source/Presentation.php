@@ -2,15 +2,8 @@
 
 namespace Source;
 
-
 class Presentation
 {
-
-    /* 
-Em PHP, "double" é um sinônimo para o tipo de dados "float". 
-Ambos se referem a números de ponto flutuante, que são números que 
-têm uma parte inteira e uma parte fracionária, separados por um ponto decimal.
-*/
     private string $name;
     private int $age;
 

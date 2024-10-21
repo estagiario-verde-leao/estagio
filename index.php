@@ -2,6 +2,7 @@
 // O use faz o autoimport da classe
 
 use Source\AreaTriangulo;
+use Source\Carro;
 use Source\Presentation;
 use Source\SayHello;
 
@@ -11,7 +12,7 @@ require './vendor/autoload.php';
 /* Abaixo vemos que o IDE já reconheceu que "estagiario" é a propriedade $property, 
 declarada lá na classe SayHello() e passada como parâmetro no método construtor.*/
 
-$obj_saudacao = new SayHello("estagiario");
+$obj_saudacao = new SayHello("estagiario"); // Chamando o método construtor.
 $obj_saudacao->sayHello() . PHP_EOL;
 echo PHP_EOL;
 /* 
@@ -42,15 +43,20 @@ echo PHP_EOL;
 /*Este código organiza a lógica de entrada e cálculo dentro de uma classe, 
 seguindo os princípios da programação orientada a objetos.*/
 
-$area = new AreaTriangulo();
+$area = new AreaTriangulo(); // Chamando o método construtor.
 $area->exibirArea();
-unset($area);
+/* unset($area);
 if (!isset($area)) {
     echo "A variável \$area, instância da classe AreaTriangulo(), " . PHP_EOL .
         "não está mais em uso e foi destruída liberando recurso." . PHP_EOL;
-}
+} */
+var_dump($area);
 
 echo PHP_EOL;
 $apresentacao = new Presentation();
 $apresentacao->saudar();
+unset($apresentacao);
 echo PHP_EOL;
+
+$carro = new Carro("Fusca", 1956);
+$carro->mostrarDetalhes();

@@ -2,18 +2,21 @@
 
 namespace Source;
 
-
 class AreaTriangulo
 {
-
     /* 
-Em PHP, "double" é um sinônimo para o tipo de dados "float". 
-Ambos se referem a números de ponto flutuante, que são números que 
-têm uma parte inteira e uma parte fracionária, separados por um ponto decimal.
-*/
+     Em PHP, "double" é um sinônimo para o tipo de dados "float". 
+     Ambos se referem a números de ponto flutuante, que são números que 
+     têm uma parte inteira e uma parte fracionária, separados por um ponto decimal.
+    */
     private float $base;
     private float $altura;
 
+    /*
+     Quando você cria um novo objeto, o construtor é chamado automaticamente, inicializando o objeto com esses valores.
+     O método construtor é chamado automaticamente quando um novo objeto de uma classe é criado. 
+     Ele inicializa o objeto, configurando seus valores e definindo seu estado inicial.
+    */
     public function __construct()
     {
         echo "O MÉTODO CONSTRUTOR \"__construct()\" DA CLASSE class AreaTriangulo() FOI CHAMADO." . PHP_EOL;

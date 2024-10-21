@@ -103,14 +103,28 @@ A class SayHello() possui um método, que quando chamado, imprime no console de 
             echo "2 - CHAMADA DO  MÉTODO __destruct()" . PHP_EOL;            
         }
     }
+### EXPLICANDO CADA COISA
+`protected $property;`: 
+Define uma propriedade chamada $property que tem visibilidade "protected". 
+Isso significa que a propriedade pode ser acessada dentro da própria classe e por classes derivadas (subclasses), mas não diretamente de fora dessas classes.
 
-`protected $property;`: Isso define uma propriedade chamada $property que tem visibilidade "protected". Isso significa que a propriedade pode ser acessada dentro da própria classe e por classes derivadas (subclasses), mas não diretamente de fora dessas classes.
+`public function __construct($property)`: 
+Este é o método construtor da classe, responsável por inicializar as propriedades da classe (nesse caso temos apenas $property. Repare que $property foi declarada, mas não foi inicializada) no momento em que a classe for
+instanciada, ou seja no momento de criação do objeto, o método __construct() é invocado e as propriedades declaradas na classe são inicializadas com os valores passados como parâmetros, porque como foi declarado no método, o construtor da classe __construct() recebe um argumento, $property.   
+O método __construct, como foi dito é chamado automaticamente quando um novo objeto da classe é criado. 
 
-`public function __construct($property)`: Este é o método construtor da classe. Ele é chamado automaticamente quando um novo objeto da classe é criado. Aqui, ele aceita um argumento $property.
-
-`$this->property = $property;`: Dentro do construtor, o valor passado como argumento $property é atribuído à propriedade da instância $this->property. Isso inicializa a propriedade da classe com o valor fornecido ao criar um objeto.
-
+`$this->property = $property;`: 
+Dentro do construtor, o valor passado como argumento $property é atribuído à propriedade da instância $this->property. Isso inicializa a propriedade da classe com o valor fornecido ao criar um objeto.
 Basicamente, essa estrutura permite que você crie um novo objeto da classe com um valor inicial para a propriedade, que depois pode ser usada dentro da classe. 
+
+`public function __destruct()`: 
+Uma variável (propriedade, no contexto da POO) é um espaço reservado na mémoria do computador para o 
+armazenamento de diferentes tipos de dados. 
+Quando uma propriedade é declarada, um espaço é alocado na memória. 
+Quando a propriedade é inicializada o espaço alocado recebe o valor atribuído à variável declarada.
+O método __destruct(), não destrói a propriedade ou varável, mas apenas o valor que lhe foi atribuído na inicialização.
+De outra forma, o destrutor destrói o valor da propriedadee, mas não a propriedade em si que continua a exitir, mas isso ocorre automaticamente quando o objeto sai de escopo ou é explicitamente destruído usando unset(), como neste caso. 
+O destrutor é útil para liberar recursos específicos, mas não é algo que precisa ser usado para liberar memória de propriedades comuns.
 
 Nesse exemplo:
 
