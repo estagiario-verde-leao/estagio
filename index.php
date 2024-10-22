@@ -3,6 +3,7 @@
 
 use Source\AreaTriangulo;
 use Source\Carro;
+use Source\FullStackPhp;
 use Source\Presentation;
 use Source\SayHello;
 
@@ -45,12 +46,11 @@ seguindo os princípios da programação orientada a objetos.*/
 
 $area = new AreaTriangulo(); // Chamando o método construtor.
 $area->exibirArea();
-/* unset($area);
+unset($area);
 if (!isset($area)) {
     echo "A variável \$area, instância da classe AreaTriangulo(), " . PHP_EOL .
         "não está mais em uso e foi destruída liberando recurso." . PHP_EOL;
-} */
-var_dump($area);
+}
 
 echo PHP_EOL;
 $apresentacao = new Presentation();
@@ -58,5 +58,17 @@ $apresentacao->saudar();
 unset($apresentacao);
 echo PHP_EOL;
 
-$carro = new Carro("Fusca", 1956);
-$carro->mostrarDetalhes();
+$dev = new FullStackPhp("Mysql", "Apache", "PHP", "Ubuntu", "PhpStorm", "HTML");
+$dev->showInfoFsphp();
+
+$carro1 = new Carro("Ford", 1956);
+$carro1->showInfoarro();
+
+$carro2  = new Carro("Chevrolet", 1937);
+$carro2->showInfoarro();
+
+$carros = [
+    "Carro1" => $carro1,
+    "Carro2" => $carro2
+];
+var_dump($carros);

@@ -21,10 +21,10 @@ O usuário corrente é "dev".
     ├──drwxr-xr-x 4 dev dev  4096 Oct 14 18:14 php_oo_project
     ├──drwxr-xr-x 9 dev dev  4096 Oct 14 01:37 phpoo
 
-Repare que como root é o proprietário do diretório `estagio_project`, o usuário dev não tem permissão de escrita no diretório. Resolvemos isso mudando a propriedade do diretório do projeto de root para dev. 
+Repare que como root é o proprietário do diretório `estagio_project`, o usuário dev não tem permissão de escrita no diretório. Resolvemos isso dando ao usuário corrente (dev no caso), a propriedade sobre o diretório do projeto.
    
     $ sudo chown -R $USER:$USER /var/www/estagio_project
-
+Isso só é possível porque dev é usuário com privilégios root.
 ### ESTRUTURA DE "www" COM A ALTERAÇÃO DE PROPRIETÁRIO DO DIRETÓRIO
     .
     ├──drwxr-xr-x 5 dev dev 4096 Oct 16 10:08 estagio_project
@@ -36,7 +36,7 @@ Repare que como root é o proprietário do diretório `estagio_project`, o usuá
   
     $ composer init
     $ composer update
-Lembre-se, o composer oferece restrição ao root, por questóes de segurança.
+Lembre-se, o composer oferece restrição ao root, por questóes de segurança, por isso alteramos a propriedade do diretório. Essa é uma das formas de resolver esse tipo de problema.
 
 ### ESTRUTURA DO PROJETO
     .
@@ -123,8 +123,11 @@ armazenamento de diferentes tipos de dados.
 Quando uma propriedade é declarada, um espaço é alocado na memória. 
 Quando a propriedade é inicializada o espaço alocado recebe o valor atribuído à variável declarada.
 O método __destruct(), não destrói a propriedade ou varável, mas apenas o valor que lhe foi atribuído na inicialização.
-De outra forma, o destrutor destrói o valor da propriedadee, mas não a propriedade em si que continua a exitir, mas isso ocorre automaticamente quando o objeto sai de escopo ou é explicitamente destruído usando unset(), como neste caso. 
+Basta executar var_dump() no objeto, que é uma variável declarada para receber o valor da instância da classe e 
+veremos que o valor retornado é NULL, indicando que o objeto está vazio, ou que as propriedades declaradas estão vazias.
+De outra forma, o destrutor destrói o valor das propriedades atribuídas ao objeto, mas não a propriedade em si que continua a existir, mas isso ocorre automaticamente quando o objeto sai de escopo ou é explicitamente destruído usando unset(), como neste caso. 
 O destrutor é útil para liberar recursos específicos, mas não é algo que precisa ser usado para liberar memória de propriedades comuns.
+Para entender de verdade execute var_dump ($objeto) alternadamente, antes e depois de unset();
 
 Nesse exemplo:
 
@@ -134,10 +137,10 @@ Nesse exemplo:
 
 **Método sayHello**: Quando chamado, ele imprime uma saudação personalizada usando a propriedade $property.
 
-Quando o objeto `$obj_saudacao` é criado, diz-se que a classe `SayHello()` foi instanciada. Diz-se também que `$obj_saudacao` é um "novo" objeto SayHello().
-Agora passamos a expressão "estagiario" como argumento em Sayhello ().
+Quando o objeto `$obj_saudacao` é criado, diz-se que a classe `SayHello()` foi instanciada e suas propriedades e métodos inicializados. Diz-se também que `$obj_saudacao` é um "novo" objeto SayHello().
+Agora passamos a expressão "estagiario" como parâmetro em Sayhello (), porque foi declarado no método construtor que ele receberia argumento.
 
-Quando o método sayHello é chamado é impresso (echo) no console de depuração, a expressão "estagiario", que concatenada com "Olá", produz a expressão de saudação "Olá estagiario".
+Quando o método sayHello é chamado é impresso (echo) no console de depuração, a palavra "estagiario", que concatenada com a string "Olá", produz a expressão de saudação "Olá estagiario".
 </details>
 <details>
 <summary>O ARQUIVO index.php :eye: </summary> 
