@@ -4,7 +4,7 @@
 namespace Source;
 
 
-class FullStackPhp
+class FsPhp
 {
     public $db_name;
     public $server_name;
